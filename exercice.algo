@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define MAX 100
+   int main(){
+       char s[MAX]; 
+      char c ; int i=0;
+       int nbrWord=0 , nbrVwl=0 , nbrChar=0 ;
+       // lecture de la phrase
+       printf("Entrez une phrase terminant par '.' ");
+       
+        c = getchar();
+       while ((c != '.') && (i<100)){
+             s[i++]= c ;
+             c = getchar();
+          
+       // longueur de la phrase et nbr de voyels et d'espaces
+       while ((c != '.') && (i<100)){
+             if (s[i++] == ' ')
+              { nbrWord++ ; }
+             else if ( (s[i++] == 'a') || (s[i++] == 'e') || (s[i++] == 'o') ||(s[i++] == 'u') ||(s[i++] == 'i'))
+              { nbrVwl++; }
+             
+             }
+             nbrChar++;
+             //affichage 
+             printf(" la longueur de votre phrase est %d\n le nombre de voyels est %d\n le nombre de mots est %d\n",nbrChar ,nbrVwl, nbrWord);
+return 0 ;
+}
